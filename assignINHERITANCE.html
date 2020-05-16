@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <p id="bl"></p><br>
+    <p id="bl1"></p>
+<body>
+    Enter The Amount:<input type="text" id="x" name="x"></input><br>
+    withdraw Amount:<input type="text" id="w" name="w"></input><br>
+    <button type="button" onclick="w1.deposit()">update balance user1</button>
+    <button type="button" onclick="w2.deposit()">update balance user2</button>
+    <button type="button" onclick="w1.disp()">show data of user 1</button>
+    <button type="button" onclick="w2.disp()">show data of user2</button>
+    <button type="button" onclick="w1.withdraw()">withdraw bal of user1</button>
+    <button type="button" onclick="w2.withdraw()">withdraw bal of user2</button>
+<script>
+    
+class account{
+    constructor(n,b){
+    this.name=n;
+    this.balance=b;
+    }
+    deposit(){
+        let x=document.getElementById("x");
+        let val=x.value;
+        this.balance += Number(val);
+     document.getElementById("bl").innerHTML=this.balance;
+    }
+    disp(){   
+        document.getElementById("bl1").innerHTML=this.name+" "+this.balance;
+    }
+};
+class current_account extends account{
+   withdraw(){
+    let x=document.getElementById("w");
+        let vall=x.value;
+        document.getElementById("bl").innerHTML=this.balance=this.balance-vall;
+   }
+};
+/*myaccount = new account("kailas gangan",0);
+myaccount2 = new account("mac gangan",0);*/
+
+w1= new current_account("kailas",0);
+w2 = new current_account("mac",0);
+</script>
+</body>
+</html> 
