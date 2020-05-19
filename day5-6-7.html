@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head><title>FORM VALIDATION</title></head>
+        <form  name="f1" action="https://www.covid19india.org/" onsubmit="return match()" >
+            UserID:<input type="text" name="user" required/><br/>
+            Password:<input type="password" name="password" required/><br/>
+            Re-enter Password:<input type="password" name="password2" required/><br/>
+            mobile:<input type="number" name="mobile" required/><br/>
+            Address:<textarea type="number" name="address" required></textarea><br/>
+            Age:<input type="number" name="age" required/><br/>
+            <input type="submit"/><br/>
+            </form>
+        <script> 
+        function match(){
+var firstpassword=document.f1.password.value;
+var secondpassword=document.f1.password2.value;
+var user=document.f1.user.value;
+var mobile=document.f1.mobile.value;
+var age=document.f1.age.value;
+
+if(firstpassword!=secondpassword)
+{ alert("password should be same");
+return false;}        
+else if(user.length<3 && user.length>15)
+{ alert("user length must in range of 3 to 15");
+return false;}
+else if(mobile.length!=10)
+{ alert("mobile no should be 10 digits");
+return false;}
+else if(age.length<18 && age.length>100)
+{ alert("Age must be in 18 to 100 range");
+return false;}
+else
+{
+return true;
+}
+}
+ </script>
+    </body>>
+</html>
