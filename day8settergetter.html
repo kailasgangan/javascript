@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<body>
+       <p id="demo"></p>
+       <p id="dm"></p>
+       <p id="total"></p>
+       <p id="per"></p>
+       <p id="kk"></p>
+      <!---- RollNo:<input id="roll" type="number"/><br/>
+       Name:<input id="nm" type="number"/><br/>
+       marks1:<input id="m1" type="number"/><br/>
+       marks2:<input id="m2" type="number"/><br/>
+       martks3:<input id="m3" type="number"/><br/>
+       <button type="button" onclick="testing()">submit</button>-->
+<script>
+class student{
+    constructor(){
+        this.rollnumber;
+        this.name;
+        this.marks1;
+        this.marks2;
+        this.marks3;
+    };
+    set roll(r){
+         this.rollnumber = Number(r);
+}
+set name1(n){
+         this.name = n;
+}
+set m1(n){
+         this.marks1 = Number(n);
+}
+set m2(n){
+         this.marks2 = Number(n);
+}
+set m3(n){
+         this.marks3 = Number(n);
+}
+get m1(){
+    return this.marks1;
+}
+get m2(){
+    return this.marks2;
+}
+get m3(){
+    return this.marks3;
+}
+ disp() {
+    document.getElementById("dm").innerHTML = "RollNo= " + this.rollnumber + " " + "Name= " + this.name;
+}
+      total(){
+          var total = (a1.m1 + a1.m2 + a1.m3);
+         document.getElementById("total").innerHTML = "sum of martk=" + total;
+    }
+    //-----------------------------------------------------------------------------------------
+    percentage(){
+         var per=((a1.m1 + a1.m2 + a1.m3)/300)*100;
+         document.getElementById("per").innerHTML = "percentage=" + per;
+    }
+};
+//class student.......
+a1 = new student();
+a1.roll = 111;
+a1.name1 = "kailas";
+a1.m1 = 67;
+a1.m2 = 66;
+a1.m3 = 77;
+    a1.total();
+    a1.percentage();
+    a1.disp();
+
+</script>
+</body>
+</html>
+
