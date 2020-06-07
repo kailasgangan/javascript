@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Assignment no-10-11-12</title>
+<!--------------------------------------------style------------------------------------------------------>
+        <style>
+        h1 { 
+            color: #FF0000;
+             }
+             p { 
+            background-color: blue;
+                color: white;
+             }
+             div{
+               color:#FF5F04;
+             }
+             .red {
+                color: red;
+             }
+        </style>
+        </head>
+<!-----------------------------------------------body---------------------------------------------------->  
+<body>         
+     <input type="text" id="myH2" />
+red:<input onclick="red()" type="radio" name="color"/> 
+blue:<input onclick="blue()" type="radio" name="color"/> 
+green:<input onclick="green()" type="radio" name="color"/> 
+
+        <h1 id="id1" align="left">Kailas Gangan</h1>
+<!--------------------------<p>------------------------------>        
+        <p id="bg">Kailas Gangan</p>
+        <p id="tag">hii i am kailas.</p>
+        <p id="tag">i love to meet new people.</p>
+        <p id="tag">i am very glad to being a part of VITA.</p>
+        <p id="demo"></p>
+<!--------------------------<button>-------------------------------->      
+<button type="button" onclick="document.getElementById('id1').style.color = '#3498DB'">change color</button>
+<button type="button" onclick="document.getElementById('id1').style.textAlign = 'right'" >change alignment</button>
+<button type="button" onclick="bg()" >change bckgrnd and text color</button><br/><br/>
+
+<div id="fontsize">KailasGangan</div>
+<!--------------FontSize-------------------------------------->
+<label>Select FontSize:</label>
+   <select name="cars" id="cars" onchange="Font(this)">
+      <option value="10">1</option>
+      <option value="20">2</option>
+      <option value="30">3</option>
+      <option value="40">4</option>
+      <option value="50">5</option>
+      <option value="60">6</option>
+      <option value="70">7</option>
+      <option value="80">8</option>
+      <option value="90">9</option>
+      <option value="100">10</option>
+    </select> &nbsp&nbsp <div id="demo" ><b>kailas Gangan</b></div>
+    <input type="text" id="11" />
+    <input type="text" id="12"/>
+   <output id="13"></output>
+    <button type="button" onclick="add()">add</button>
+    <button type="button" onclick="sub()">substract</button> 
+<!------------------------------<ol>------------------------------------>
+    <ol>
+      <li id="ol">kailas</li>
+      <li>prathamesh</li>
+      <li>piyush</li>
+    </ol>
+    <button onclick="myFunction()">Remove paragraph</button><br/><br/>
+<!-------------------------------<span>>----------------------------------------->    
+   <input type="text" id="in" onkeyup="sp()"/>
+<!----------------------------------------------script-----------------------------------------------------> 
+<script> 
+ function bg(){
+    document.getElementById('bg').style.backgroundColor = "white";
+    document.getElementById('bg').style.color = "blue"; 
+ }
+ function red(){
+    document.getElementById("myH2").style.color = "#ff0000";
+ }
+ 
+ function blue(){
+    document.getElementById("myH2").style.color = "#1D93E1";
+ }
+ 
+ function green(){
+    document.getElementById("myH2").style.color = "#7DC900";
+ }
+ function Font(fvar) {
+  document.getElementById("fontsize").style.fontSize = fvar.value + "px";
+}
+function add(){
+ var a = document.getElementById("11").value;
+ var b = document.getElementById("12").value;
+ var c = Number(a) + Number(b);
+ document.getElementById("13").innerHTML = c ; 
+}
+function sub(){
+ var a = document.getElementById("11").value;
+ var b = document.getElementById("12").value;
+ var c = Number(a) - Number(b);
+ document.getElementById("13").innerHTML = c ; 
+}
+var x = document.getElementsByTagName("p");
+  document.getElementById("demo").innerHTML = "no of p tag is =" + x.length;
+function myFunction() {
+  var myobj = document.getElementById("ol");
+  myobj.remove();
+}
+function sp(){
+   var x = document.getElementById("in").value;
+   document.getElementsById("sp").innerHTML = x;
+}
+  </script>
+</body>
+</html>
