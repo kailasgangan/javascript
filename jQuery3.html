@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-----------------------------------<style>-------------------------------------------------->  
+  <style type="text/css">
+    #exm { border: 5px red solid; }
+    </style>
+<!-------------------------------------------<script>-------------------------------------------------->    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  //-----------------------------------
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#ii:text").val(function(){
+    return $("#kk:text").val();
+    });
+  });
+  //-----------------------------------
+    $("#exm").mouseenter(function(){
+      $("#exm").css("border", "white");
+    });
+   //----------------------------------------------
+     $("input[id='sm']").click(function(){
+      var radioValue = $("input[name='same']:checked").val();
+      $("ol").append("<li>" + radioValue + "</li>");
+    });
+    //----------------------------------------------
+    $("#remove").click(function(){
+      $("p").remove();
+    });
+    //---------------------------------------------
+    $("input[type='radio']").click(function(){
+      var rad = $("input[name='color']:checked").val();
+      $("textarea").css("color",rad);
+    });
+  });
+</script>
+</head>
+<!------------------------------------<body>---------------------------------------------------------->
+<body>
+<p>Name: <input id="kk"type="text" name="user"></p>
+copy:<input id="ii"type="text" name="user"></p>
+<button>Set the value of the input field</button><br/><br/>
+<ol>
+  <li>banana</li>
+  <li>grapes</li>
+</ol>
+mango:<input type="radio" name="same" value="mango" id="sm"/>
+coco:<input type="radio" name="same" value="coco" id="sm"/>
+pineapple:<input type="radio" name="same" value="pineapple" id="sm"/>
+apple:<input type="radio" name="same" value="apple" id="sm"/><br/><br/>
+<img alt="Example" src="D:\JAVASCRIPT\shiva.PNG" id="exm"></imp>
+<p>i am kailas gangan</p><br/>
+<button id="remove">click to remove tag</button><br/><br/>
+<textarea></textarea>
+red:<input type="radio" name="color" value="red"/>
+gree:<input type="radio" name="color" value="green"/>
+yellow:<input type="radio" name="color" value="yellow"/>
+blue:<input type="radio" name="color" value="blue"/>
+
+</body>
+</html>
