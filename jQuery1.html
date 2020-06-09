@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       h1 {color:red;}
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#styl").on({
+    mouseenter: function(){
+        $("#styl").hide();
+    },  
+    mouseleave: function(){
+        $("#styl").show();
+    }
+  });
+$("#btn").click(function(){
+    $("#id").hide();
+});
+
+//-------------------------------------------------------------------------------------
+$("h1").mouseenter(function(){
+    $("h1").css( {"border-style":"solid", "border-color":"yellow"});
+  });
+  $("h1").mouseleave(function(){
+    $("h1").css({"color":"red","border-color":"white"});
+  });
+
+  //-----------------------------------------------------------------------------------
+  $("#in").blur(function(){
+    $(this).css("background-color", "#cccccc");
+  });
+  $("#in").focus(function(){
+    $(this).css({"background-color":"white","color":"green"});
+  });
+ });
+</script>
+</head>
+<body>
+ <button id="btn">click me</button>
+ <img src="D:\JAVASCRIPT\shiva.PNG" id="id"></img>
+<p id="styl">Click or move the mouse pointer over this paragraph.</p>
+<h1>kailas</h1>
+focus and blur:<input type="text" id="in"/>
+</body>
+</html>
