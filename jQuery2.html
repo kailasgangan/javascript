@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#kg").click(function(){
+    $("#ll").toggle();
+  });
+$("h1").mouseenter(function(){
+  $("h1").fadeOut("slow");
+});
+$("#kk").click(function(){
+    $("h3").slideUp("2000").slideDown("2000");
+});
+
+$("#pp").click(function(){
+    $("#oo").animate({
+        height: '150px',
+      width: '150px'    
+  });
+});
+
+$("#uu").click(function(){
+    $("p").toggle("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<img src="D:\JAVASCRIPT\shiva.PNG" id="ll"></img>
+<img src="D:\JAVASCRIPT\shiva.PNG" id="oo"   height='15px' width='15px' ></img>
+<h1>Kailas gangan</h1>
+<h3>kailas gangan</h3>
+<p>This is a paragraph with little content.</p>
+<button id="kg">Toggle image</button>
+<button id="kk">toggle name</button>
+<button id="pp">increase size of img.</button>
+<button id="uu">Hide</button>
+</body>
+</html>
